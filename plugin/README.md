@@ -100,8 +100,3 @@ admob.isInterstitialReady(function(isReady){
 
 email:gooogleadmob@gmail.com
 
-
-## Screenshots (banner Ad / interstitial Ad) ##
-
-![ScreenShot](screenshot/admob0.png)
-![ScreenShot](screenshot/admob5.png)
