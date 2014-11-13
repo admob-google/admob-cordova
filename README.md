@@ -5,26 +5,24 @@ admob phonegap plugin(admob cordova plugin) is built base on
 - phonegap 3.4 or cordova 3.5 
 - admob ios sdk 6.12.0 
 - admob google play service 4.5
+<br/>
 project home:https://github.com/admob-google/admob-cordova<br/>
 
 
 ### 1.install admob phonegap plugin
 use the cordova command<br/>
 download the plugin ,then install with local location
-```
-cordova plugin add c:\phonegap-admob-plugin 
-```
+    cordova plugin add c:\phonegap-admob-plugin 
 
 or install cordova plugin online 
-```
-cordova plugin add org.apache.cordova.admob
-```
+
+    cordova plugin add org.apache.cordova.admob
 
 use the phonegap command<br/>
 download the plugin ,then install with local location
-```
-phonegap plugin add c:\phonegap-admob-plugin 
-```
+
+    phonegap plugin add c:\phonegap-admob-plugin 
+
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
 
@@ -86,9 +84,8 @@ document.addEventListener(admob.Event.onAdmobInterstitialReceive), onAdmobEvent,
 ```
 ###  7.more function
 1.hide admob banner
-```
-admob.hideBanner()
-```
+
+    admob.hideBanner()
 
 2.test if Interstitial has loaded success
 ```
@@ -105,5 +102,6 @@ email:gooogleadmob@gmail.com
 
 
 ## Screenshots (banner Ad / interstitial Ad) ##
-![ScreenShot](screenshot/admob2.png)   ![ScreenShot](screenshot/admob1.png)
+
+![ScreenShot](screenshot/admob0.png)
 ![ScreenShot](screenshot/admob5.png)
