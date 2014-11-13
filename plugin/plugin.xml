@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="org.apache.cordova.admob"
+        id="org.google.admobplugin"
         version="1.0.0">
     <name>AdmobPlugin</name>
     <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js</keywords>
