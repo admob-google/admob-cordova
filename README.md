@@ -5,8 +5,7 @@ admob phonegap plugin(admob cordova plugin) is built base on
 - phonegap 3.4 or cordova 3.5 
 - admob ios sdk 6.12.0 
 - admob google play service 4.5
-<br/>
-## project home:https://github.com/admob-google/admob-cordova<br/>
+- project home:https://github.com/admob-google/admob-cordova<br/>
 
 
 ### 1.install admob phonegap plugin
