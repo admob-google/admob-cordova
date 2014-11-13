@@ -16,7 +16,7 @@ download the plugin ,then install with local location
 
 or install cordova plugin online 
 
-    cordova plugin add org.google.admobplugin
+    cordova plugin add com.admob.plugin
 
 use the phonegap command<br/>
 download the plugin ,then install with local location
