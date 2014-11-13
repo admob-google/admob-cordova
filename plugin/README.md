@@ -1,39 +1,39 @@
 ﻿admob phonegap plugin(cordova plugin for admob)
 ====================
 Google AdMob plugin for Cordova, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your html5 app with one javascript line.api is easy to use.<br/>
-admob phonegap plugin(admob cordova plugin) build base on phonegap 3.4 or cordova 3.5 ,admob ios sdk 6.12.0 ,admob google play service 4.5<br/>
-project home:https://github.com/admob-google/admob-cordova<br/>
+admob phonegap plugin(admob cordova plugin) is built base on 
+- phonegap 3.4 or cordova 3.5 
+- admob ios sdk 6.12.0 
+- admob google play service 4.5
+- project home:https://github.com/admob-google/admob-cordova<br/>
 
 
 ### 1.install admob phonegap plugin
 use the cordova command<br/>
 download the plugin ,then install with local location
-```
-cordova plugin add c:\phonegap-admob-plugin 
-```
+
+    cordova plugin add c:\phonegap-admob-plugin 
 
 or install cordova plugin online 
-```
-cordova plugin add org.apache.cordova.admob
-```
+
+    cordova plugin add org.apache.cordova.admob
 
 use the phonegap command<br/>
 download the plugin ,then install with local location
-```
-phonegap plugin add c:\phonegap-admob-plugin 
-```
+
+    phonegap plugin add c:\phonegap-admob-plugin 
+
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
-```
-admob.initAdmob("admob banner ID","admob interstitial ID");//admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
-```
+
+    admob.initAdmob("admob banner ID","admob interstitial ID");//admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
+
 ### 3.show banner  at relation position 
 there are some banner size in admob.BannerSize,and you can create your own banner size that is available in admob platform.
 admob.Position hold all relation position const .
-```
+
     admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_APP);//show banner at the top of app 
-    
-```
+
 and more you can set more param for admob such as test mode and is your app made for child.
 ```
 	var admobParam=new  admob.Params();
@@ -44,10 +44,9 @@ and more you can set more param for admob such as test mode and is your app made
 ```
 ### 4.show banner  at absolute position
 you can put admob banner at absolute position as easy as relation position.
-```
-admob.showBannerAbsolute(admob.BannerSize.BANNER,0,70);//show banner at absolute position x 0,y 70
- 
-```
+
+    admob.showBannerAbsolute(admob.BannerSize.BANNER,0,70);//show banner at absolute position x 0,y 70
+
 ###  5.show admob Interstitial 
 show admob Interstitial in phonegap,cordova or xdk application is the same step.
 cache Interstitial ,and then show it in onInterstitialReceive function or show it when your game over.
@@ -85,9 +84,8 @@ document.addEventListener(admob.Event.onAdmobInterstitialReceive), onAdmobEvent,
 ```
 ###  7.more function
 1.hide admob banner
-```
-admob.hideBanner()
-```
+
+    admob.hideBanner()
 
 2.test if Interstitial has loaded success
 ```
@@ -101,3 +99,9 @@ admob.isInterstitialReady(function(isReady){
 3.for more usage ,ref to files in Example folder <br/>
 
 email:gooogleadmob@gmail.com
+
+
+## Screenshots (banner Ad / interstitial Ad) ##
+
+![ScreenShot](screenshot/admob0.png)
+![ScreenShot](screenshot/admob5.png)
