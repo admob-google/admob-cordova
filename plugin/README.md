@@ -23,6 +23,12 @@ download the plugin ,then install with local location
 
     phonegap plugin add c:\phonegap-admob-plugin 
 
+
+use phonegap builder ,add config<br/>
+
+    <gap:plugin name="com.admob.plugin" version="2.0.0" source="plugins.cordova.io"/>
+
+
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
 

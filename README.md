@@ -25,7 +25,7 @@ download the plugin ,then install with local location
 
 use phonegap builder ,add config<br/>
 
-    <gap:plugin name="com.admob.plugin" version="1.0.0" source="plugins.cordova.io"/>
+    <gap:plugin name="com.admob.plugin" version="2.0.0" source="plugins.cordova.io"/>
 
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
@@ -101,6 +101,8 @@ admob.isInterstitialReady(function(isReady){
 ```
 
 3.for more usage ,ref to files in Example folder <br/>
+
+4. Admob sdk for ios used IDFA ,so remember to check up app service as ad.
 
 email:gooogleadmob@gmail.com
 
