@@ -2,9 +2,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.admob.plugin"
-        version="2.0.0">
+        version="3.0.0">
     <name>AdmobPlugin</name>
-    <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js</keywords>
+    <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js,google admob</keywords>
     <description>
    Google AdMob plugin for Cordova, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your app with one javascript line.simple and easy to use api.
     </description>
