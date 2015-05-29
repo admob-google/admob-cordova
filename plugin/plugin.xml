@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.admob.plugin"
-        version="5.0.0">
+        version="1.0.0">
     <name>AdmobPlugin</name>
     <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js</keywords>
     <description>
@@ -22,7 +22,7 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-           <meta-data  android:name="com.google.android.gms.version"   android:value="4452000"/>
+           <meta-data  android:name="com.google.android.gms.version"   android:value="7327000"/>
 			<activity  android:name="com.google.android.gms.ads.AdActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
@@ -31,6 +31,7 @@
 			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
         </config-file>
         
+        <source-file src="src/android/libs/admobadplugin.jar" target-dir="libs/"/>
         <source-file src="src/android/libs/google-play-services.jar" target-dir="libs/"/>
     </platform>
     <platform name="ios">
