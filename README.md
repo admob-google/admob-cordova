@@ -10,6 +10,11 @@ admob phonegap plugin(admob cordova plugin) is built base on
 
 
 ### 1.install admob phonegap plugin
+install with npm
+
+	npm install admob
+	cordova plugin add admob
+
 use the cordova command<br/>
 download the plugin ,then install with local location
 
@@ -26,7 +31,7 @@ download the plugin ,then install with local location
 
 use phonegap builder ,add config<br/>
 
-    <gap:plugin name="com.admob.plugin" version="5.0.1" source="plugins.cordova.io"/>
+    <gap:plugin name="com.admob.plugin" version="5.0.3" source="plugins.cordova.io"/>
 
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
