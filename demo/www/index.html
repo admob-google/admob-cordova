@@ -5,109 +5,109 @@
     <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/af.ui.css"/>
     <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/icons.css"/>
     <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/buttons.css"/>
-     <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/forms.css"/>
     <link rel="stylesheet" type="text/css" href="appframework-2.1.0/css/af.popup.css"/>
     <script type="text/javascript" charset="utf-8" src="appframework-2.1.0/appframework.js"></script>
     <script type="text/javascript" charset="utf-8" src="appframework-2.1.0/ui/appframework.ui.js"></script>
 
     <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript">
-         var testingParam;
-         function onReceiveFail (message) {
-            var msg=admob.Error[message.data];
-            if(msg==undefined){
-                msg=message.data;
+    <script type="text/javascript">
+        var testingParam;
+        function onReceiveFail(message) {
+            var msg = admob.Error[message.data];
+            if (msg == undefined) {
+                msg = message.data;
             }
             $.ui.popup(msg);
-            $("#logArea").val($("#logArea").val()+msg);
-         }
-         function onReceiveSuccess(message){
-             var msg=message.type+"\n";
-             $("#logArea").val($("#logArea").val()+msg);
-             $("#showInterstitialButton").removeClass("gray");
-             $("#showInterstitialButton").addClass("green");
-         }
+            $("#logArea").val($("#logArea").val() + msg);
+        }
+        function onReceiveSuccess(message) {
+            var msg = message.type + "\n";
+            $("#logArea").val($("#logArea").val() + msg);
+            $("#showInterstitialButton").removeClass("gray");
+            $("#showInterstitialButton").addClass("green");
+        }
         function onDeviceReady() {
 
             $.ui.toggleNavMenu();
         }
-        function setAdmobID(){
-            testingParam= new admob.Params();
-            testingParam.isTesting=$("#toggle").prop("checked");
-            var bannerID=$("#bannerID").val();
-            var interstitialID=$("#interstitialID").val();
-            admob.initAdmob(bannerID,interstitialID);
-            document.addEventListener(admob.Event.onInterstitialFailedReceive,onReceiveFail, false);
-            document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
-            document.addEventListener(admob.Event.onInterstitialReceive,onReceiveSuccess, false);
+        function setAdmobID() {
+            testingParam = new admob.Params();
+            testingParam.isTesting = $("#toggle").prop("checked");
+            var bannerID = $("#bannerID").val();
+            var interstitialID = $("#interstitialID").val();
+            admob.initAdmob(bannerID, interstitialID);
+            document.addEventListener(admob.Event.onInterstitialFailedReceive, onReceiveFail, false);
+            document.addEventListener(admob.Event.onBannerFailedReceive, onReceiveFail, false);
+            document.addEventListener(admob.Event.onInterstitialReceive, onReceiveSuccess, false);
             $.ui.toggleNavMenu(true);
         }
-        document.addEventListener('deviceready',onDeviceReady, false);
+        document.addEventListener('deviceready', onDeviceReady, false);
 
     </script>
-<script type="text/javascript">
-    function hideRelationBanner(){
-        admob.hideBanner();
-    }
-    function showRelationBanner(){
-        var bannerSize= $("#relationBannerSize").val();
-        var bannerPosition=$("#relationBannerPosition").val();
-        admob.showBanner(admob.BannerSize[bannerSize],bannerPosition,testingParam);
-    }
-    function hideABSBanner(){
-        admob.hideBanner();
-    }
-    function showABSBanner(){
-        var bannerSize= $("#absBannerSize").val();
-        var positionX=$("#positionX").val();
-        var positionY=$("#positionY").val();
-        admob.showBannerAbsolute(admob.BannerSize[bannerSize],positionX,positionY,testingParam);
-    }
-    function cacheInterstitial(){
-        admob.cacheInterstitial(testingParam);
-    }
-    function cacheOrShowInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(!result){
-                admob.cacheInterstitial(testingParam);
-            }else{
-                admob.showInterstitial();
-                $("#showInterstitialButton").removeClass("green");
-                $("#showInterstitialButton").addClass("gray");
-            }
-        });
-    }
-    function testCacheInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(result){
-                $.ui.popup("cached success");
-            }else{
-                $.ui.popup(" not cached");
-            }
-        });
-    }
-    function showInterstitial(){
-        admob.isInterstitialReady(function testResult(result){
-            if(result){
-                admob.showInterstitial();
-                $("#showInterstitialButton").removeClass("green");
-                $("#showInterstitialButton").addClass("gray");
-            }else{
-                $.ui.popup("not cached");
-            }
-        });
-    }
-    function showReallyBanner(){
-        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER);
-    }
-    function showBannerWithParam(){
-        var admobParam=new  admob.Params();
-        admobParam.extra={'keyword':"admob phonegame"};
-        admobParam.isForChild=true;
-        admobParam.isTesting=true;
-        admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_CENTER,admobParam);
-    }
-</script>
+    <script type="text/javascript">
+        function hideRelationBanner() {
+            admob.hideBanner();
+        }
+        function showRelationBanner() {
+            var bannerSize = $("#relationBannerSize").val();
+            var bannerPosition = $("#relationBannerPosition").val();
+            admob.showBanner(admob.BannerSize[bannerSize], bannerPosition, testingParam);
+        }
+        function hideABSBanner() {
+            admob.hideBanner();
+        }
+        function showABSBanner() {
+            var bannerSize = $("#absBannerSize").val();
+            var positionX = $("#positionX").val();
+            var positionY = $("#positionY").val();
+            admob.showBannerAbsolute(admob.BannerSize[bannerSize], positionX, positionY, testingParam);
+        }
+        function cacheInterstitial() {
+            admob.cacheInterstitial(testingParam);
+        }
+        function cacheOrShowInterstitial() {
+            admob.isInterstitialReady(function testResult(result) {
+                if (!result) {
+                    admob.cacheInterstitial(testingParam);
+                } else {
+                    admob.showInterstitial();
+                    $("#showInterstitialButton").removeClass("green");
+                    $("#showInterstitialButton").addClass("gray");
+                }
+            });
+        }
+        function testCacheInterstitial() {
+            admob.isInterstitialReady(function testResult(result) {
+                if (result) {
+                    $.ui.popup("cached success");
+                } else {
+                    $.ui.popup(" not cached");
+                }
+            });
+        }
+        function showInterstitial() {
+            admob.isInterstitialReady(function testResult(result) {
+                if (result) {
+                    admob.showInterstitial();
+                    $("#showInterstitialButton").removeClass("green");
+                    $("#showInterstitialButton").addClass("gray");
+                } else {
+                    $.ui.popup("not cached");
+                }
+            });
+        }
+        function showReallyBanner() {
+            admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_CENTER);
+        }
+        function showBannerWithParam() {
+            var admobParam = new admob.Params();
+            admobParam.extra = {'keyword': "admob phonegame"};
+            admobParam.isForChild = true;
+            admobParam.isTesting = true;
+            admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_CENTER, admobParam);
+        }
+    </script>
     <!---->
 </head>
 <body>
@@ -116,12 +116,14 @@
     <div id="content">
         <div id="deviceready">
 
-         </div>
-        <div class='panel' id='bannerPanel' >
+        </div>
+        <div class='panel' id='bannerPanel'>
             <header><h1>cordova admob</h1></header>
             <div class="button-grouped  flex tabbed" style="text-align: center; margin-left: 10%;margin-right: 10%; ">
-                <a class="button  pressed" data-transition="none"   onclick="$('#relationBannerDiv').show();$('#absoluteBannerDiv').hide();">relation</a>
-                <a class="button" data-transition="none"  onclick="$('#relationBannerDiv').hide();$('#absoluteBannerDiv').show();">absolute</a>
+                <a class="button  pressed" data-transition="none"
+                   onclick="$('#relationBannerDiv').show();$('#absoluteBannerDiv').hide();">relation</a>
+                <a class="button" data-transition="none"
+                   onclick="$('#relationBannerDiv').hide();$('#absoluteBannerDiv').show();">absolute</a>
             </div>
             <div id="relationBannerDiv">
                 <form>
@@ -151,9 +153,11 @@
                         <option value="10">TOP_APP</option>
                         <option value="11">BOTTOM_APP</option>
                     </select>
-                    <a class="button yellow" onclick="hideRelationBanner()">hide banner</a> <a class="button green" onclick="showRelationBanner()">show banner</a>
+                    <a class="button yellow" onclick="hideRelationBanner()">hide banner</a> <a class="button green"
+                                                                                               onclick="showRelationBanner()">show
+                    banner</a>
                 </form>
-                <a class="button green" onclick="showReallyBanner()">show  really banner</a>
+                <a class="button green" onclick="showReallyBanner()">show really banner</a>
                 <a class="button green" onclick="showBannerWithParam()">show with param</a>
             </div>
             <div id="absoluteBannerDiv" style="display: none;">
@@ -173,8 +177,8 @@
                     <label for="positionX">X:</label><input id="positionX" type="number" placeholder="x position">
                     <label for="positionY">Y:</label> <input id="positionY" type="number" placeholder="y position">
                     <label for="positionY"></label>
-                     <a class="button yellow" onclick="hideABSBanner()">hide banner</a>
-                     <a class="button green" onclick="showABSBanner()">show banner</a>
+                    <a class="button yellow" onclick="hideABSBanner()">hide banner</a>
+                    <a class="button green" onclick="showABSBanner()">show banner</a>
                 </form>
             </div>
         </div>
@@ -188,9 +192,10 @@
 
         <div class='panel' id='otherPanel' selected='true'>
             <header><h1>Setting</h1></header>
-            <label for="bannerID">Banner ID:</label><input id="bannerID" type="text" placeholder="banner id" >
-            <label for="interstitialID">interstitial ID :</label> <input id="interstitialID" type="text" placeholder="interstitial id" >
-           
+            <label for="bannerID">Banner ID:</label><input id="bannerID" type="text" placeholder="banner id">
+            <label for="interstitialID">interstitial ID :</label> <input id="interstitialID" type="text"
+                                                                         placeholder="interstitial id">
+
             <label>is testing</label>
             <input id="toggle" type="checkbox" name="toggle" value="1" class="toggle" checked>
             <label for="toggle" data-on="Yes" data-off="No">
@@ -200,15 +205,16 @@
         </div>
         <div class='panel' id='aboutPanel'>
             <header><h1>About</h1></header>
-           <p>
-               admob plugin for cordova, phonegap and xdk html5 app
-               project:admob-cordova
-               home:https://github.com/admob-google/admob-cordova
-               email:gooogleadmob@gmail.com
-           </p>
+            <p>
+                admob plugin for cordova, phonegap and xdk html5 app
+                project:admob-cordova
+                home:https://github.com/admob-google/admob-cordova
+                email:gooogleadmob@gmail.com
+            </p>
         </div>
     </div>
-    <textarea rows="6" placeholder="event log" id="logArea" style="overflow: auto" ></textarea>
+    <textarea rows="6" placeholder="event log" id="logArea" style="overflow: auto"></textarea>
+
     <div id="navbar">
         <a class="icon home" href="#bannerPanel">Banner</a>
         <a class="icon bug" href="#interstitialPanel">Interstitial</a>
