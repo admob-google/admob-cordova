@@ -7,7 +7,7 @@
     <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js</keywords>
     <description>
    Google AdMob plugin for Cordova, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your app with one javascript line.simple and easy to use api.
-    project home:https://github.com/admob-google/admob-phonegap<br/>
+    project home:https://github.com/admob-google/admob-cordova<br/>
     </description>
     <license>Apache 2.0 License</license>
     <repo>https://github.com/admob-google/admob-cordova</repo>
