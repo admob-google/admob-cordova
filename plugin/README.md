@@ -31,7 +31,11 @@ download the plugin ,then install with local location
 
 use phonegap builder ,add config<br/>
 
-    <gap:plugin name="com.admob.plugin" version="5.0.4" source="plugins.cordova.io"/>
+    <gap:plugin name="com.admob.plugin" version="5.2.0" source="plugins.cordova.io"/>
+
+    or
+
+    <gap:plugin name="com-admob-plugin" version="5.2.0" source="npm"/>
 
 ### 2.init admob phonegap plugin
 init plugin after deviceready event 
@@ -115,5 +119,5 @@ email:gooogleadmob@gmail.com
 
 ## Screenshots (banner Ad / interstitial Ad) ##
 
-![ScreenShot](screenshot/admob0.png)
-![ScreenShot](screenshot/admob5.png)
+![ScreenShot](https://github.com/admob-google/admob-cordova/raw/master/screenshot/admob0.png)
+![ScreenShot](https://github.com/admob-google/admob-cordova/raw/master/screenshot/admob5.png)
