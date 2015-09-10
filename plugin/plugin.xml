@@ -22,7 +22,7 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-           <meta-data  android:name="com.google.android.gms.version"   android:value="7327000"/>
+           <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 			<activity  android:name="com.google.android.gms.ads.AdActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
