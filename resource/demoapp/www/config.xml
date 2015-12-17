@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.admob.demo" version="1.0.0" xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0">
+    <name>demo</name>
+    <description>
+        a simple demo config for phonegap builer with admob plugin
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    
+    <gap:plugin name="com.admob.plugin" version="2.0.0" source="plugins.cordova.io"/>
+    
+    
+</widget>
