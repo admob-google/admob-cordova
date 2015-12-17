@@ -119,6 +119,6 @@ email:gooogleadmob@gmail.com
 
 ## Screenshots (banner Ad / interstitial Ad) ##
 
-![ScreenShot](https://github.com/admob-google/admob-cordova/raw/master/screenshot/admob0.png)
-![ScreenShot](https://github.com/admob-google/admob-cordova/raw/master/screenshot/admob5.png)
+![ScreenShot](https://github.com/admob-google/admob-cordova/blob/master/resource/screenshot/admob0.png?raw=true)
+![ScreenShot](https://github.com/admob-google/admob-cordova/blob/master/resource/screenshot/admob5.png?raw=true)
 
