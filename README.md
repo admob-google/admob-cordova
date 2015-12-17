@@ -31,7 +31,7 @@ download the plugin ,then install with local location
 
 use phonegap builder ,add config<br/>
 
-    <gap:plugin name="com-admob-plugin" version="5.5.0" source="npm"/>
+    <gap:plugin name="com-admob-plugin" version="5.3.0" source="npm"/>
     
 or
 
