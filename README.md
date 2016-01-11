@@ -85,16 +85,16 @@ all event type is in admob.Event<br/>
 function onAdmobEvent (message) {
     //do some on admob event
 }
-document.addEventListener(admob.Event.onAdmobBannerDismiss, onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobBannerFailedReceive), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobBannerLeaveApplication), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobBannerPresent), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobBannerReceive), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobInterstitialDismiss), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobInterstitialFailedReceive), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobInterstitialLeaveApplication), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobInterstitialPresent), onAdmobEvent, false);
-document.addEventListener(admob.Event.onAdmobInterstitialReceive), onAdmobEvent, false);
+document.addEventListener(admob.Event.onBannerDismiss, onAdmobEvent, false);
+document.addEventListener(admob.Event.onBannerFailedReceive, onAdmobEvent, false);
+document.addEventListener(admob.Event.onBannerLeaveApplication, onAdmobEvent, false);
+document.addEventListener(admob.Event.onBannerPresent, onAdmobEvent, false);
+document.addEventListener(admob.Event.onBannerReceive, onAdmobEvent, false);
+document.addEventListener(admob.Event.onInterstitialDismiss, onAdmobEvent, false);
+document.addEventListener(admob.Event.onInterstitialFailedReceive, onAdmobEvent, false);
+document.addEventListener(admob.Event.onInterstitialLeaveApplication, onAdmobEvent, false);
+document.addEventListener(admob.Event.onInterstitialPresent, onAdmobEvent, false);
+document.addEventListener(admob.Event.onInterstitialReceive, onAdmobEvent, false);
 ```
 ###  7.more function
 1.hide admob banner
