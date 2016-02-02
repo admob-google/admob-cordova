@@ -23,7 +23,13 @@
         <br/>
         <li><a href="javascript:showTestBanner();">show test banner</a></li>
         <br/>
-        <li><a href="javascript:admob.showBannerAbsolute(admob.BannerSize.BANNER,0,70);">show banner absolute</a></li>
+        <li><a href="javascript:admob.showBannerAbsolute(admob.BannerSize.BANNER,0,70);">banner 1</a></li>
+        <br/>
+        <li><a href="javascript:admob.showBannerAbsolute(admob.BannerSize.BANNER,30,70);">banner 2</a></li>
+        <br/>
+        <li><a href="javascript:admob.showBanner(admob.BannerSize.BANNER,admob.Position.BOTTOM_CENTER,null)">banner 3</a></li>
+        <br/>
+        <li><a href="javascript:admob.showBanner(admob.BannerSize.BANNER,admob.Position.BOTTOM_APP,null)">banner 4</a></li>
         <br/>
         <li><a href="javascript:admob.hideBanner()">hide banner</a></li>
     </lu>
@@ -58,7 +64,7 @@ function showTestBanner(){
         document.getElementById("alertdiv").innerHTML="load fail: "+message.type+"  "+msg;
     }
     function onDeviceReady() {
-    	admob.initAdmob("banner ID","interstitial ID");
+    	admob.initAdmob("ca-app-pub-931030468xxxxx/xxxxxxxxxxx","ca-app-pub-93103xxxxxxx/xxxxxxxxxxx");
         document.addEventListener(admob.Event.onInterstitialReceive, onInterstitialReceive, false);
         document.addEventListener(admob.Event.onInterstitialFailedReceive,onReceiveFail, false);
         document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
