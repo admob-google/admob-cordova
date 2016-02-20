@@ -2,7 +2,7 @@
 ====================
 Google AdMob plugin for Cordova, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your html5 app with one javascript line.api is easy to use.<br/>
 admob phonegap plugin(admob cordova plugin) is built base on 
-- phonegap 3.4 or cordova 5.0
+- phonegap 3.4 or cordova 6.0
 - admob ios sdk 7.6.0 
 - admob android sdk 8
 - project home:https://github.com/admob-google/admob-cordova<br/>
@@ -31,7 +31,7 @@ download the plugin ,then install with local location
 
 use phonegap builder ,add config<br/>
 
-    <gap:plugin name="com-admob-plugin" version="5.3.1" source="npm"/>
+    <gap:plugin name="admob" version="5.4.0" source="npm"/>
     
 
 ### 2.init admob phonegap plugin

@@ -10,9 +10,11 @@
 -(void) fireEvent:(NSString*) eventType withEventData:(NSString*) jsonData{
     NSString *js =@"cordova.fireDocumentEvent('%@',{ 'data': '%@' });";
     NSString *json=[NSString stringWithFormat:js,eventType,jsonData];
-    [self writeJavascript:json];
+   //[self writeJavascript:json];
+    [[self commandDelegate ]evalJs:json];
 }
 #pragma mark   CDVPlugin Function------------------
+/*
 - (CDVPlugin *)initWithWebView:(UIWebView *)theWebView {
     self = (AdmobAdPlugin *)[super initWithWebView:theWebView];
     if (self) {
@@ -20,6 +22,12 @@
         admobAPI.plugin=self;
     }
     return self;
+}
+ */
+- (void)pluginInitialize
+{
+    admobAPI=[[AdmobAPI alloc] init];
+    admobAPI.plugin=self;
 }
 
 -(void) updateWebView:(int)position bannerWidth:(int) bwidth bannerHeight:(int) bheight{
@@ -57,10 +65,16 @@
 }
 - (void)admobShowBannerAbsolute:(CDVInvokedUrlCommand *)command {
     NSDictionary *params = [command argumentAtIndex:0];
-    int adx=(int)[params integerValueForKey:@"x" defaultValue:0];
+    /*int adx=(int)[params integerValueForKey:@"x" defaultValue:0];
     int ady=(int)[params integerValueForKey:@"y" defaultValue:0];
     int width= (int)[params integerValueForKey:@"bannerWidth" defaultValue:0];
     int height=(int) [params integerValueForKey:@"bannerHeight" defaultValue:0];
+    */
+    int adx=(int) [[params objectForKey:@"x"] integerValue];
+    int ady=(int) [[params objectForKey:@"y"] integerValue];
+    int width= (int)[[params objectForKey:@"bannerWidth"] integerValue];
+    int height=(int) [[params objectForKey:@"bannerHeight"] integerValue];
+    
     NSDictionary *extra=[params objectForKey:@"param"];
     
     [admobAPI showBannerAbsolute:adx withY:ady bannerWidth:width bannerHeight:height withPara:extra];
