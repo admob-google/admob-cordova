@@ -1,5 +1,5 @@
 {
-    "version": "5.4.1",
+    "version": "5.4.2",
     "name": "admob",
     "cordova_name": "Admob Plugin",
     "description": "\n   Google AdMob plugin for Cordova, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your app with one javascript line.simple and easy to use api.build on admob ios 7.6 and admob android sdk 8\n    project home:https://github.com/admob-google/admob-cordova",

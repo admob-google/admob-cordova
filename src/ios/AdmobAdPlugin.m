@@ -50,7 +50,8 @@
             webFrame.origin.y= srcFrame.origin.y;
         }
         self.webView.frame=webFrame;
-        
+        NSString* js=@"window.scrollBy(1, 20); window.scrollBy(-1, -20);";
+        [[self commandDelegate ]evalJs:js];
         //[self.webView reload];//reload can fix banner over webview problem,but will reload the page.
         
         //transform can fix banner over webview problem too 
