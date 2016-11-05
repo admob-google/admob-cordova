@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="admob"
-        version="5.4.2">
+        version="5.5.0">
     <name>Admob Plugin</name>
     <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl,xdk,jquery,intel appframework,jqmob,cordova,phonegap,ads,html5,js</keywords>
     <description>
@@ -25,8 +25,13 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-           <meta-data  android:name="com.google.android.gms.version"   android:value="8115000"/>
-			<activity  android:name="com.google.android.gms.ads.AdActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+            <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+		 <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
              <uses-permission android:name="android.permission.INTERNET"/>
@@ -35,7 +40,11 @@
         </config-file>
         
         <source-file src="src/android/libs/admobadplugin.jar" target-dir="libs/"/>
-        <source-file src="src/android/libs/google-play-services.jar" target-dir="libs/"/>
+        <source-file src="src/android/libs/play-services-ads-9.4.0.jar" target-dir="libs/"/>
+        <source-file src="src/android/libs/play-services-ads-lite-9.4.0.jar" target-dir="libs/"/>
+        <source-file src="src/android/libs/play-services-base-9.4.0.jar" target-dir="libs/"/>
+        <source-file src="src/android/libs/play-services-basement-9.4.0.jar" target-dir="libs/"/>
+        <resource-file src="src/android/res" target="res/" />
     </platform>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -57,5 +66,9 @@
         <framework src="CoreGraphics.framework"/>
         <framework src="SystemConfiguration.framework"/>
         <framework src="AudioToolbox.framework"/>
+        <framework src="MediaPlayer.framework"/>
+        <framework src="GLKit.framework"/>
+        <framework src="SafariServices.framework"/>
+        <framework src="CoreMotion.framework"/>
     </platform>
 </plugin>
